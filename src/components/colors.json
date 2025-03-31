@@ -1,0 +1,24 @@
+{
+    "colors":[
+      {
+        "name":"Dark-Charcoal",
+        "hex":"#47443b"
+      },
+      {
+        "name":"Charcoal",
+        "hex":"#7a7768"
+      },
+      {
+        "name":"Dark-Pastel",
+        "hex":"#b4b09b"
+      },
+      {
+        "name":"Light-Pastel",
+        "hex":"#d7d1b8"
+      },
+      {
+        "name":"dark-text",
+        "hex":"#3F3D36"
+      }
+    ]
+  }
