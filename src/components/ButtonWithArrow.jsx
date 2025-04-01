@@ -10,24 +10,42 @@ const Container = styled.div`
 `
 
 const Arrow = styled.div`
+    // left side of arrow
     width: 0;
     height: 0;
-    border: 6px solid transparent;
+    border: 8px solid transparent;
     border-bottom: 12px solid ${colors.colors[0].hex};
     position: relative;
     rotate: 270deg;
-    right: 44px;
+    right: 48px;
     transition: all 0.4s ease;
     opacity: 0;
 
+    // little box things
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+
+        width: 4px;
+        height: 0px;
+        left: -2px;
+        top: 10px;
+        border-bottom: 4px solid ${colors.colors[3].hex};
+
+        box-shadow: 8px 22px 0px 0px ${colors.colors[0].hex},
+        -8px 22px 0px 0px ${colors.colors[0].hex};
+    }
+
+    // right side of arrow
     &:after {
         content: '';
         position: absolute;
-        left: -6px;
+        left: -8px;
         top: 12px;
         width: 0;
         height: 0;
-        border: 6px solid transparent;
+        border: 8px solid transparent;
         border-top: 24px solid ${colors.colors[0].hex};
     }
 

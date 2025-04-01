@@ -23,7 +23,7 @@ const SidebarItem = styled.div`
   background-color: ${colors.colors[2].hex};
   width: 16px;
   height: 100%;
-  margin-right: 5px;
+  margin-right: 6px;
 
   &:nth-child(2){
     width: 5px;
