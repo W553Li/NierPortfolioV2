@@ -3,23 +3,30 @@ import styled from 'styled-components'
 import Button from './Button'
 import colors from './colors.json'
 
+// TODO: add active effect to button and arrow
+
+
 const Container = styled.div`
     position: relative;
     display: flex;
     align-items: center;
+    // width: fit-content;
 `
 
 const Arrow = styled.div`
     // left side of arrow
+    transition: all 0.4s ease;
+    opacity: 0;
+    // position: relative;
+    position: absolute;
+    pointer-events: none;
+
     width: 0;
     height: 0;
     border: 8px solid transparent;
     border-bottom: 12px solid ${colors.colors[0].hex};
-    position: relative;
     rotate: 270deg;
-    right: 48px;
-    transition: all 0.4s ease;
-    opacity: 0;
+    left: -5rem;
 
     // little box things
     &:before {

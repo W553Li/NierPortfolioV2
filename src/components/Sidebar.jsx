@@ -5,11 +5,9 @@ import colors from './colors.json';
 
 const SidebarParent = styled.div`
   display: flex;
-  // flex-direction: row;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
+  flex-direction: row;
+  // min-height: fit-content;
+  position: relative;
   padding-left: 1rem;
 `
 
@@ -17,6 +15,10 @@ const BarsContainer = styled.div`
   display: flex;
   flex-direction: row;
   height: 100%;
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  height: calc(100% - 2rem);
 `
 
 const SidebarItem = styled.div`
@@ -33,10 +35,11 @@ const SidebarItem = styled.div`
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 1rem;
+  margin-left: 5rem;
   padding-top: 2rem;
   width: 504px;
   gap: 1rem;
+  position: relative;
 `
 
 

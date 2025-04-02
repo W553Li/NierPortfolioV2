@@ -16,7 +16,7 @@ const ButtonParent = styled.button`
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   gap: 1rem;
-  margin-left: 3rem;
+  // margin-left: 3rem;
 
   color: ${colors.colors[0].hex};
   border: none;
