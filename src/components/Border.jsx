@@ -8,7 +8,7 @@ const BorderParentTop = styled.div`
   display: flex;
 
   left: 0;
-  top: 3rem;
+  top: 6rem;
   width: 100%;
   height: 0.2rem;
 `
@@ -30,7 +30,7 @@ const BorderDip = styled.div`
 
   margin-top: 0.2rem;
   margin-left: 72px;
-  width: 1rem;
+  width: 0.75rem;
   height: 0.3rem;
 
   // repeated for 24 dips
@@ -64,7 +64,7 @@ const BorderTrioLeft = styled.div`
   background-color: ${colors.colors[1].hex};
 
   margin-top: 0.5rem;
-  margin-left: 21px;
+  margin-left: 24px;
   width: 0.4rem;
   height: 0.4rem;
   border-radius: 50%;

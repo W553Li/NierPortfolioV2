@@ -26,7 +26,7 @@ const Arrow = styled.div`
     border: 8px solid transparent;
     border-bottom: 12px solid ${colors.colors[0].hex};
     rotate: 270deg;
-    left: -5rem;
+    left: -4rem;
 
     // little box things
     &:before {

@@ -8,7 +8,10 @@ const NavbarParent = styled.div`
     flex-direction: row;
     // min-height: fit-content;
     position: relative;
-    padding-left: 1rem;
+
+    // padding-left: 1rem;
+    left: 3.5%;
+    width: 92.5%;
 `
 
 const BarsContainer = styled.div`
@@ -17,7 +20,7 @@ const BarsContainer = styled.div`
     height: 100%;
     position: absolute;
     top: 2rem;
-    left: 1rem;
+    // left: 1rem;
     height: calc(100% - 2rem);
 `
 
@@ -35,11 +38,16 @@ const NavbarItem = styled.div`
 const ButtonContainer = styled.div`
     display: flex;
     flex-direction: row;
-    margin-left: 5rem;
+    margin-left: 4rem;
     padding-top: 2rem;
-    // width: 504px;
-    gap: 4rem;
+    width: 100%;
+    gap: 3rem;
     position: relative;
+
+    // button widths
+    > * {
+        width: 100%;
+    }
 `
 
 export default function Navbar() {

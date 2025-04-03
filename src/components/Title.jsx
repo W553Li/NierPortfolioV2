@@ -10,6 +10,11 @@ const TitleParent = styled.div`
   flex-direction: row;
   align-items: baseline;
   text-shadow: 0.4rem 0.4rem #00000030;
+  position: relative;
+
+  left: 3.5%;
+  margin-top: 3rem;
+  // margin-bottom: 4rem;
 
   h1{
     margin-block-start: 0em;

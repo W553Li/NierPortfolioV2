@@ -8,10 +8,10 @@ const FooterParent = styled.div`
     display: flex;
     align-items: center;
     
-    width: 90%;
+    width: 92.5%;
     height: 4rem;
-    left: 5%;
-    bottom: 8rem;
+    left: 3.5%;
+    bottom: 6rem;
 
     font-size: 1.75rem;
     

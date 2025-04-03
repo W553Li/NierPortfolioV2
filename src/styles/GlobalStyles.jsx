@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -14,9 +14,17 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
   body {
     font-family: 'FOT-Rodin', sans-serif;
+    position: fixed;
+    width: 100%;
   }
-`
+`;
 
-export default GlobalStyles
+export default GlobalStyles;

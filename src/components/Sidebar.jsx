@@ -8,7 +8,8 @@ const SidebarParent = styled.div`
   flex-direction: row;
   // min-height: fit-content;
   position: relative;
-  padding-left: 1rem;
+  // padding-left: 1rem;
+  left: 3.5%;
 `
 
 const BarsContainer = styled.div`
@@ -16,9 +17,9 @@ const BarsContainer = styled.div`
   flex-direction: row;
   height: 100%;
   position: absolute;
-  top: 2rem;
-  left: 1rem;
-  height: calc(100% - 2rem);
+  top: 3rem;
+  // left: 1rem;
+  height: calc(100% - 3rem);
 `
 
 const SidebarItem = styled.div`
@@ -35,9 +36,11 @@ const SidebarItem = styled.div`
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 5rem;
-  padding-top: 2rem;
-  width: 504px;
+  margin-left: 4rem;
+  padding-top: 3rem;
+  // width: 504px;
+  width: 27%;
+  // max-height: 50%;
   gap: 1rem;
   position: relative;
 `
