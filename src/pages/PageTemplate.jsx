@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Panel from '../components/Panel'
 import styled from 'styled-components';
+import ButtonPanel from '../components/ButtonPanel';
 
 export default function PageTemplate() {
 
@@ -15,11 +16,12 @@ export default function PageTemplate() {
             <Title Title="Title" Subtitle="Subtitle" />
             {/* <Title></Title> */}
 
-            <Sidebar></Sidebar>
+            {/* <Sidebar></Sidebar> */}
 
             {/* <Panel></Panel> */}
-            <Panel></Panel>
+            {/* <Panel></Panel> */}
 
+            <ButtonPanel buttons={["a", "b", "c", "d", "e", "f", "g", "h", "i", 'j', 'k', 'l', 'm', 'n', 'o', 'p']}></ButtonPanel>
 
             <Footer></Footer>
         </>

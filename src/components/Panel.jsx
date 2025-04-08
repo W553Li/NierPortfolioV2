@@ -22,7 +22,7 @@ const PanelLeft = styled.div`
     width: 27%;
     bottom: 14rem;
     top: 15rem;
-    left: 3.5%;           // actually 10 bc of margin and left
+    left: 3.5%;
     margin-left: 4rem
 `
 
@@ -58,6 +58,17 @@ const PanelLarge = styled.div`
     bottom: 14rem;
     top: 15rem;
     left: 38%;
+
+    &:before {
+        background-color: ${colors.colors[0].hex};
+        content: '';
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+    }
 `
 
 
