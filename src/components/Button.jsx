@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import colors from './colors.json'
 
 const ButtonParent = styled.button`
-  background-color: ${colors.colors[2].hex};
+  // background-color: ${colors.colors[2].hex};
+  background-color: ${props => props.panel ? colors.colors[3].hex : colors.colors[2].hex};
   position: relative;
   display: flex;
   align-items: center;
@@ -23,7 +24,7 @@ const ButtonParent = styled.button`
   outline: none;
   
   &:before, &:after {
-    background-color: ${colors.colors[1].hex};
+    background-color: ${colors.colors[0].hex};
     transition: all 0.2s ease-in-out;
     visibility: hidden;
     content: '';
@@ -43,7 +44,7 @@ const ButtonParent = styled.button`
   }
 
   &:hover {
-    box-shadow: inset 100vh 0 0 0 ${colors.colors[1].hex};
+    box-shadow: inset 100vh 0 0 0 ${colors.colors[0].hex};
     color: ${colors.colors[2].hex};
     
     &:before, &:after {
@@ -61,7 +62,7 @@ const ButtonParent = styled.button`
 `
 
 const ButtonChild = styled.div`
-  background-color: ${colors.colors[1].hex};
+  background-color: ${colors.colors[0].hex};
   transition: all 0.2s ease-in-out;
 
   width: 24px;
@@ -69,13 +70,13 @@ const ButtonChild = styled.div`
   
   ${ButtonParent}:hover & {
     // background-color: ${colors.colors[2].hex};
-    box-shadow: inset 100vh 0 0 0 ${colors.colors[2].hex};
+    box-shadow: inset 100vh 0 0 0 ${colors.colors[3].hex};
   }
 `
 
-export default function Button({ children }) {
+export default function Button({ panel, children }) {
   return (
-    <ButtonParent>
+    <ButtonParent panel={panel}>
       <ButtonChild />
       {children}
     </ButtonParent>

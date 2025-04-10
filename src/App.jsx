@@ -1,37 +1,44 @@
 import { useState } from 'react'
-import Button from './components/Button'
-import Sidebar from './components/Sidebar'
 import Border from './components/Border'
-import Title from './components/Title'
-import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-import Panel from './components/Panel'
-import PageTemplate from './pages/PageTemplate'
 
 import About from './pages/About'
+import Experience from './pages/Experience'
+import Interests from './pages/Interests'
+import Projects from './pages/Projects'
 
+import styled from 'styled-components'
 import GlobalStyles from './styles/GlobalStyles'
-import styled from 'styled-components';
 
 const SidebarContainer = styled.div`
   display: flex;
 `
 
 function App() {
+  const [activePage, setActivePage] = useState("About Me");
+
+  // render the active page
+  const renderPage = () => {
+    switch(activePage) {
+      case "About Me":
+        return <About />;
+      case "Experience":
+        return <Experience />;
+      case "Projects":
+        return <Projects />;
+      case "Interests":
+        return <Interests />;
+      default:
+        return <About />;
+    }
+  };
 
   return (
     <>
       <GlobalStyles />
-
-      {/* <SidebarContainer>
-        <Sidebar></Sidebar>
-        <Sidebar></Sidebar>
-      </SidebarContainer> */}
-
-      <Border></Border>
-      <Navbar></Navbar>
-      
-      <About></About>
+      <Border />
+      <Navbar activePage={activePage} setActivePage={setActivePage} />
+      {renderPage()}
     </>
   )
 }

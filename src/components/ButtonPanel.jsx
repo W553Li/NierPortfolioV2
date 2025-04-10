@@ -9,6 +9,7 @@ const SidebarParent = styled.div`
   position: relative;
   height: calc(100vh - 29rem);
   left: 3.5%;
+  bottom: 0.5rem;
 `
 
 const BarsContainer = styled.div`
@@ -35,7 +36,7 @@ const ButtonContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   gap: 1rem;
   width: 100%;
   z-index: 2;
@@ -60,7 +61,7 @@ const PanelContainer = styled.div`
 const PanelTop = styled.div`
   background-color: ${colors.colors[0].hex};
   position: fixed;
-  width: 25%;
+  width: 24.5%;
   height: 2px;
   margin-left: 1rem;
   top: 16rem;
@@ -92,7 +93,7 @@ const BottomDot = styled.div`
 const PanelBottom = styled.div`
   background-color: ${colors.colors[0].hex};
   position: fixed;
-  width: 25%;
+  width: 24.5%;
   height: 2px;
   margin-left: 1rem;
   bottom: 15rem;
@@ -252,28 +253,6 @@ export default function ButtonPanel({buttons}) {
         ))}
       </ArrowContainer>
 
-      {/* <PanelContainer>
-        <PanelTop/>
-        <PanelMain
-          ref={panelRef}
-          onScroll={handleScroll}
-        >
-          <ButtonContainer>
-            {buttons.map((button, index) => (
-              <div 
-                key={`button-wrapper-${index}`}
-                onMouseEnter={() => handleMouseEnter(button)}
-                onMouseLeave={handleMouseLeave}
-              >
-                <Button>
-                  {button}
-                </Button>
-              </div>
-            ))}
-          </ButtonContainer>
-        </PanelMain>
-      </PanelContainer> */}
-
       <PanelContainer>
         <PanelTop/>
         <TopDot/>
@@ -288,7 +267,7 @@ export default function ButtonPanel({buttons}) {
                 onMouseEnter={() => handleMouseEnter(button)}
                 onMouseLeave={handleMouseLeave}
               >
-                <Button>
+                <Button panel={true}>
                   {button}
                 </Button>
               </div>

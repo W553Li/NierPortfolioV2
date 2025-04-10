@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
-import ButtonWithArrow from './ButtonWithArrow';
+import NavBarButton from './NavBarButton';
 import colors from './colors.json';
 
 const NavbarParent = styled.div`
@@ -21,7 +21,8 @@ const BarsContainer = styled.div`
     position: absolute;
     top: 2rem;
     // left: 1rem;
-    height: calc(100% - 2rem);
+    // height: calc(100% - 2rem);
+    height: 2.5rem;
 `
 
 const NavbarItem = styled.div`
@@ -41,27 +42,54 @@ const ButtonContainer = styled.div`
     margin-left: 4rem;
     padding-top: 2rem;
     width: 100%;
-    gap: 3rem;
+    gap: 2rem;
     position: relative;
 
     // button widths
     > * {
         width: 100%;
+        // opacity: ${props => props.selected ? 1 : 0.5};
     }
 `
 
-export default function Navbar() {
+export default function Navbar({ activePage, setActivePage }) {
+    const handleSelect = (buttonName) => {
+        if (buttonName !== activePage) {
+            setActivePage(buttonName);
+        }
+    };
+
     return (
         <NavbarParent>
             <BarsContainer>
                 <NavbarItem />
                 <NavbarItem />
             </BarsContainer>
-            <ButtonContainer>
-                <ButtonWithArrow>About Me</ButtonWithArrow>
-                <ButtonWithArrow>Experience</ButtonWithArrow>
-                <ButtonWithArrow>Projects</ButtonWithArrow>
-                <ButtonWithArrow>Interests</ButtonWithArrow>
+            <ButtonContainer role="radiogroup" aria-label="Navigation">
+                <NavBarButton 
+                    isActive={activePage === "About Me"}
+                    onClick={() => handleSelect("About Me")}
+                >
+                    About Me
+                </NavBarButton>
+                <NavBarButton 
+                    isActive={activePage === "Experience"}
+                    onClick={() => handleSelect("Experience")}
+                >
+                    Experience
+                </NavBarButton>
+                <NavBarButton 
+                    isActive={activePage === "Projects"}
+                    onClick={() => handleSelect("Projects")}
+                >
+                    Projects
+                </NavBarButton>
+                <NavBarButton 
+                    isActive={activePage === "Interests"}
+                    onClick={() => handleSelect("Interests")}
+                >
+                    Interests
+                </NavBarButton>
             </ButtonContainer>
         </NavbarParent>
     )

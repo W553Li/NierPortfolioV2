@@ -13,7 +13,7 @@ const TitleParent = styled.div`
   position: relative;
 
   left: 3.5%;
-  margin-top: 3rem;
+  margin-top: 2rem;
   // margin-bottom: 4rem;
 
   h1{

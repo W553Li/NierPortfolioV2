@@ -46,7 +46,8 @@ const ButtonContainer = styled.div`
 `
 
 
-export default function Sidebar() {
+export default function Sidebar({buttons}) {
+
   return (
     <SidebarParent>
       <BarsContainer>
@@ -54,8 +55,9 @@ export default function Sidebar() {
         <SidebarItem />
       </BarsContainer>
       <ButtonContainer>
-        <ButtonWithArrow>Button</ButtonWithArrow>
-        <ButtonWithArrow>Button</ButtonWithArrow>
+        {buttons.map((button) => (
+          <ButtonWithArrow>{button}</ButtonWithArrow>
+        ))}
       </ButtonContainer>
     </SidebarParent>
   )

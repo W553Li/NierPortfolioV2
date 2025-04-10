@@ -1,7 +1,9 @@
 import React from 'react'
+import PageTemplate from './PageTemplate'
 
 export default function Experience() {
+
   return (
-    <div>Experience</div>
+    <PageTemplate title="Experience"></PageTemplate>
   )
 }
