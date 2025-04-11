@@ -9,19 +9,13 @@ import Panel from '../components/Panel'
 import styled from 'styled-components';
 import ButtonPanel from '../components/ButtonPanel';
 
-export default function PageTemplate({title, subtitle, sidebars, buttonPanels}) {
+export default function PageTemplate({title = "", subtitle = "", sidebars = [], onSidebarClick, footer = ""}) {
 
     return (
         <>
             <Title Title={title} Subtitle={subtitle} />
-
-            <Sidebar buttons={["a", "b", "c", "d"]}></Sidebar>
-
-            {/* <Panel title="Banana" text="asdf"></Panel>
-
-            <ButtonPanel buttons={["a", "b", "c", "d", "e", "f", "g", "h", "i", 'j', 'k', 'l', 'm', 'n', 'o', 'p']}></ButtonPanel> */}
-
-            <Footer></Footer>
+            <Sidebar buttons={sidebars} onButtonClick={onSidebarClick}></Sidebar>
+            <Footer children={footer}></Footer>
         </>
     )
 }

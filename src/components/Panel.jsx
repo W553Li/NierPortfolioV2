@@ -80,7 +80,7 @@ const PanelLarge = styled.div`
     }
 `
 
-export default function Panel({ title, text }) {
+export default function Panel({ title = "", text = ""}) {
     const [left, setLeft] = useState(false)
     const [middle, setMiddle] = useState(false)
     const [right, setRight] = useState(false)

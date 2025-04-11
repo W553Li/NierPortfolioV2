@@ -18,7 +18,8 @@ const BarsContainer = styled.div`
   flex-direction: row;
   height: 100%;
   position: absolute;
-  top: 1.5rem;
+  // top: 1.5rem;
+  bottom: 1.5rem;
 `
 
 const SidebarItem = styled.div`
@@ -54,7 +55,8 @@ const PanelContainer = styled.div`
   background-color: ${colors.colors[3].hex};
   
   width: 27%;
-  top: 1.5rem;
+  // top: 1.5rem;
+  bottom: 1.5rem;
   left: 3.5%;
 `
 
@@ -200,19 +202,21 @@ const ArrowBase = styled.div`
   }
 `
 
-const Arrow = React.memo(({ isActive }) => {
+const Arrow = React.memo(({ isActive, isClicked }) => {
   return (
     <ArrowBase
       style={{
-        opacity: isActive ? 1 : 0
+        // opacity: isActive ? 1 : 0
+        opacity: isClicked ? 1 : (isActive ? 1 : 0)
       }}
     />
   );
 });
 
 
-export default function ButtonPanel({buttons}) {
+export default function ButtonPanel({buttons, onButtonClick}) {
   const [active, setActive] = useState("");
+  const [clicked, setClicked] = useState(null);
   const panelRef = useRef(null);
   const arrowContainerRef = useRef(null);
 
@@ -229,6 +233,11 @@ export default function ButtonPanel({buttons}) {
       // Directly match scroll positions
       arrowContainerRef.current.scrollTop = e.target.scrollTop;
     }
+  };
+
+  const handleSelect = (buttonName) => {
+    setClicked(buttonName);
+    onButtonClick(buttonName);
   };
 
   useEffect(() => {
@@ -249,6 +258,7 @@ export default function ButtonPanel({buttons}) {
           <Arrow 
             key={`arrow-${index}`}
             isActive={active === button}
+            isClicked={clicked === button}
           />
         ))}
       </ArrowContainer>
@@ -266,8 +276,9 @@ export default function ButtonPanel({buttons}) {
                 key={`button-wrapper-${index}`}
                 onMouseEnter={() => handleMouseEnter(button)}
                 onMouseLeave={handleMouseLeave}
+                onClick={() => handleSelect(button)}
               >
-                <Button panel={true}>
+                <Button panel={true} isActive={clicked === button}>
                   {button}
                 </Button>
               </div>
@@ -277,7 +288,6 @@ export default function ButtonPanel({buttons}) {
         <PanelBottom/>
         <BottomDot/>
       </PanelContainer>
-
     </SidebarParent>
   );
 }

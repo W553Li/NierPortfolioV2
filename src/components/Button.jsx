@@ -4,7 +4,9 @@ import colors from './colors.json'
 
 const ButtonParent = styled.button`
   // background-color: ${colors.colors[2].hex};
-  background-color: ${props => props.panel ? colors.colors[3].hex : colors.colors[2].hex};
+  // background-color: ${props => props.panel ? colors.colors[3].hex : colors.colors[2].hex};
+  // background-color: ${props => props.isActive ? colors.colors[0].hex : colors.colors[2].hex};
+  background-color: ${props => props.panel ? (props => props.isActive ? colors.colors[0].hex : colors.colors[2].hex) : (props => props.isActive ? colors.colors[0].hex : colors.colors[2].hex)};
   position: relative;
   display: flex;
   align-items: center;
@@ -19,7 +21,8 @@ const ButtonParent = styled.button`
   gap: 1rem;
   // margin-left: 3rem;
 
-  color: ${colors.colors[0].hex};
+  // color: ${colors.colors[0].hex};
+  color: ${props => props.isActive ? colors.colors[3].hex : colors.colors[0].hex};
   border: none;
   outline: none;
   
@@ -62,7 +65,8 @@ const ButtonParent = styled.button`
 `
 
 const ButtonChild = styled.div`
-  background-color: ${colors.colors[0].hex};
+  // background-color: ${colors.colors[0].hex};
+  background-color: ${props => props.isActive ? colors.colors[3].hex : colors.colors[0].hex};
   transition: all 0.2s ease-in-out;
 
   width: 24px;
@@ -74,10 +78,14 @@ const ButtonChild = styled.div`
   }
 `
 
-export default function Button({ panel, children }) {
+export default function Button({ panel, children, onClick, isActive }) {
   return (
-    <ButtonParent panel={panel}>
-      <ButtonChild />
+    <ButtonParent 
+      panel={panel} 
+      onClick={onClick}
+      isActive={isActive}
+    >
+      <ButtonChild isActive={isActive}/>
       {children}
     </ButtonParent>
   )

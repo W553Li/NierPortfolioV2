@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import ButtonWithArrow from './ButtonWithArrow';
 import colors from './colors.json';
@@ -46,7 +46,13 @@ const ButtonContainer = styled.div`
 `
 
 
-export default function Sidebar({buttons}) {
+export default function Sidebar({ buttons, onButtonClick }) {
+  const [active, setActive] = useState(null)
+
+  const handleSelect = (buttonName) => {
+    setActive(buttonName);
+    onButtonClick(buttonName);
+  };
 
   return (
     <SidebarParent>
@@ -56,7 +62,14 @@ export default function Sidebar({buttons}) {
       </BarsContainer>
       <ButtonContainer>
         {buttons.map((button) => (
-          <ButtonWithArrow>{button}</ButtonWithArrow>
+          <ButtonWithArrow 
+            key={button}
+            // onClick={() => onButtonClick(button)}
+            onClick={() => handleSelect(button)}
+            isActive={active === button}
+          >
+            {button}
+          </ButtonWithArrow>
         ))}
       </ButtonContainer>
     </SidebarParent>
