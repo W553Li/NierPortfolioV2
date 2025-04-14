@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import colors from '../components/colors.json';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -21,9 +22,26 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    background-color: ${colors.colors[5].hex};
+
     font-family: 'FOT-Rodin', sans-serif;
     position: fixed;
     width: 100%;
+
+    &:before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      background-image: 
+        linear-gradient(${colors.colors[2].hex}20 1px, transparent 1px),
+        linear-gradient(90deg, ${colors.colors[2].hex}20 1px, transparent 1px);
+      background-size: 5px 5px;
+    }
   }
 `;
 

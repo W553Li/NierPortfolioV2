@@ -7,9 +7,9 @@ export default function Interests() {
   const [activePanel, setActivePanel] = useState(null)
   
   const panelContent = {
-    "Art": "Content about me goes here",
-    "Reading": "List of skills goes here",
-    "Music": "anana",
+    "Art": ["Content about me goes here"].join('\n'),
+    "Reading": ["List of skills goes here"].join('\n'),
+    "Music": ["anana"].join('\n'),
   }
 
   const handleButtonClick = (buttonName) => {

@@ -80,6 +80,12 @@ const PanelLarge = styled.div`
     }
 `
 
+const PanelText = styled.div`
+  white-space: pre-wrap;
+  line-height: 1.5;
+  padding: 1rem;
+`
+
 export default function Panel({ title = "", text = ""}) {
     const [left, setLeft] = useState(false)
     const [middle, setMiddle] = useState(false)
@@ -93,7 +99,8 @@ export default function Panel({ title = "", text = ""}) {
             {/* <PanelRight/> */}
 
             <PanelLarge title={title}>
-                {text}
+                <PanelText dangerouslySetInnerHTML={{ __html: text }}>
+                </PanelText>
             </PanelLarge>
         </>
     )

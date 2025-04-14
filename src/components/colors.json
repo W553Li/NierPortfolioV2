@@ -19,6 +19,14 @@
       {
         "name":"dark-text",
         "hex":"#3F3D36"
+      },
+      {
+        "name":"background",
+        "hex":"#d1cdb7"
+      },
+      {
+        "name":"arrows",
+        "hex":"#ddddc8"
       }
     ]
   }

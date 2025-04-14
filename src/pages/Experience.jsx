@@ -7,9 +7,18 @@ export default function Experience() {
   const [activePanel, setActivePanel] = useState(null)
   
   const panelContent = {
-    "Health and Rehab Research Inc": "Content about me goes here",
-    "Rogers Communications": "List of skills goes here",
-    "Waterloo Experience Accelerate Program": "ababa"
+    "Health and Rehab Research Inc": ["Role: Machine Learning Engineer",
+      "Time: June 2023 - August 2023",
+      "Location: Mississauga, Ontario"
+    ].join('\n'),
+    "Rogers Communications": ["Role: Network Engineer",
+      "Time: September 2022 - December 2022",
+      "Location: Brampton, Ontario"
+    ].join('\n'),
+    "Waterloo Experience Accelerate Program": ["Role: AI for Financial Services Project Team Member",
+      "Time: January 2022 - April 2022",
+      "Location: Waterloo, Ontario"
+    ].join('\n')
   }
 
   const handleButtonClick = (buttonName) => {

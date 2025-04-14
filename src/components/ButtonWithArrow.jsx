@@ -26,7 +26,7 @@ const Arrow = styled.div`
     height: 0;
     border: 8px solid transparent;
     // border-bottom: 12px solid ${colors.colors[0].hex};
-    border-bottom: 12px solid ${props => props.isActive ? colors.colors[3].hex : colors.colors[0].hex};
+    border-bottom: 12px solid ${props => props.isActive ? colors.colors[6].hex : colors.colors[0].hex};
     rotate: 270deg;
     left: -4rem;
 
@@ -57,7 +57,7 @@ const Arrow = styled.div`
         height: 0;
         border: 8px solid transparent;
         // border-top: 24px solid ${colors.colors[0].hex};
-        border-top: 24px solid ${props => props.isActive ? colors.colors[3].hex : colors.colors[0].hex};
+        border-top: 24px solid ${props => props.isActive ? colors.colors[6].hex : colors.colors[0].hex};
     }
 
     ${Container}:hover & {

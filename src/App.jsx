@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Border from './components/Border'
 import Navbar from './components/Navbar'
+import BackgroundItems from './components/BackgroundItems'
 
 import About from './pages/About'
 import Experience from './pages/Experience'
@@ -37,6 +38,7 @@ function App() {
     <>
       <GlobalStyles />
       <Border />
+      <BackgroundItems/>
       <Navbar activePage={activePage} setActivePage={setActivePage} />
       {renderPage()}
     </>
