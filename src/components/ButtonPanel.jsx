@@ -115,7 +115,7 @@ const PanelMain = styled.div`
 
   &::-webkit-scrollbar {
     display: visible;
-    transform: translateX(-0.75rem);
+    // transform: translateX(-0.75rem);
 
     width: 0.25rem;
   }
@@ -126,7 +126,7 @@ const PanelMain = styled.div`
   }
 
   &::-webkit-scrollbar-track {
-    margin-right: -0.75rem;
+    // margin-right: -0.75rem;
   }
 
   // -ms-overflow-hide: scrollbar;
