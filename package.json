@@ -1,7 +1,7 @@
 {
   "name": "vite-project",
   "private": true,
-  "homepage": "https://github.com/W553Li/w553li.github.io",
+  "homepage": "https://w553li.github.io",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
