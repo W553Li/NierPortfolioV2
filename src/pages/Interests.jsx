@@ -25,12 +25,12 @@ export default function Interests() {
       
       "Gaming has always been one of my biggest hobbies and passions and is one of the main reasons as to how I got interested in persuing software.", "",
       "Some of my favorite games are:",
-      `• <a href="https://www.arknights.global/" target="_blank" rel="noopener noreferrer">Arknights</a>`,
-      `• <a href="https://www.supergiantgames.com/games/hades/" target="_blank" rel="noopener noreferrer">Hades</a>`,
-      `• <a href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer">Minecraft</a>`,
-      `• <a href="https://www.niergame.com/en/" target="_blank" rel="noopener noreferrer">Nier Automata</a>`,
-      `• <a href="https://www.pathofexile.com/" target="_blank" rel="noopener noreferrer">Path of Exile</a>`,
-      `• <a href="https://terraria.org/" target="_blank" rel="noopener noreferrer">Terraria</a>`,
+      `• <img src="/images/Arknights.jpg" style="max-height: 20px;"/> <a href="https://www.arknights.global/" target="_blank" rel="noopener noreferrer">Arknights</a>`,
+      `• <img src="/images/Hades.jpg" style="max-height: 20px;"/> <a href="https://www.supergiantgames.com/games/hades/" target="_blank" rel="noopener noreferrer">Hades</a>`,
+      `• <img src="/images/Minecraft.jpg" style="max-height: 20px;"/> <a href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer">Minecraft</a>`,
+      `• <img src="/images/Nier.jpg" style="max-height: 20px;"/> <a href="https://www.niergame.com/en/" target="_blank" rel="noopener noreferrer">Nier Automata</a>`,
+      `• <img src="/images/SearingExarch.jpg" style="max-width: 20px;"/> <a href="https://www.pathofexile.com/" target="_blank" rel="noopener noreferrer">Path of Exile</a>`,
+      `• <img src="/images/Terraria.jpg" style="max-width: 20px;"/> <a href="https://terraria.org/" target="_blank" rel="noopener noreferrer">Terraria</a>`,
     ].join('\n'),
     "Reading": [
       "Reading? Reading. I enjoy reading manga and light nodels.", "", 

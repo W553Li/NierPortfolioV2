@@ -16,6 +16,7 @@ export default function About() {
   const panelContent = {
     "Me": [
       // "Hello! I'm William Li, a Computer Engineering Student studying at the University of Waterloo. I have a particular interest in web development, AI and machine learning, having built various full-stack and AI projects, especially involving computer vision.",
+      `<img src="/images/PFP.jpg" style="max-width: 600px;"/>`, 
       "Hi! I'm William Li, a Computer Engineering student at the University of Waterloo with a passion for web development, artificial intelligence, and machine learning. I enjoy bringing ideas to life through full-stack applications and intelligent systems—particularly in the realm of computer vision.",
       "",
       `Email: <a href="mailto:w553li@uwaterloo.ca">w553li@uwaterloo.ca</a>`,
