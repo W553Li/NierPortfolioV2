@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import PageTemplate from './PageTemplate'
-import ButtonPanel from '../components/ButtonPanel'
 import Panel from '../components/Panel'
+import PageTemplate from './PageTemplate'
 
 export default function Interests() {
   const [activePanel, setActivePanel] = useState(null)
@@ -25,12 +24,12 @@ export default function Interests() {
       
       "Gaming has always been one of my biggest hobbies and passions and is one of the main reasons as to how I got interested in persuing software.", "",
       "Some of my favorite games are:",
-      `• <img src="/images/Arknights.jpg" style="max-height: 20px;"/> <a href="https://www.arknights.global/" target="_blank" rel="noopener noreferrer">Arknights</a>`,
-      `• <img src="/images/Hades.jpg" style="max-height: 20px;"/> <a href="https://www.supergiantgames.com/games/hades/" target="_blank" rel="noopener noreferrer">Hades</a>`,
-      `• <img src="/images/Minecraft.jpg" style="max-height: 20px;"/> <a href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer">Minecraft</a>`,
-      `• <img src="/images/Nier.jpg" style="max-height: 20px;"/> <a href="https://www.niergame.com/en/" target="_blank" rel="noopener noreferrer">Nier Automata</a>`,
-      `• <img src="/images/SearingExarch.jpg" style="max-width: 20px;"/> <a href="https://www.pathofexile.com/" target="_blank" rel="noopener noreferrer">Path of Exile</a>`,
-      `• <img src="/images/Terraria.jpg" style="max-width: 20px;"/> <a href="https://terraria.org/" target="_blank" rel="noopener noreferrer">Terraria</a>`,
+      `• <img src="/NierPortfolioV2/images/Arknights.jpg" style="max-height: 20px;"/> <a href="https://www.arknights.global/" target="_blank" rel="noopener noreferrer">Arknights</a>`,
+      `• <img src="/NierPortfolioV2/images/Hades.jpg" style="max-height: 20px;"/> <a href="https://www.supergiantgames.com/games/hades/" target="_blank" rel="noopener noreferrer">Hades</a>`,
+      `• <img src="/NierPortfolioV2/images/Minecraft.jpg" style="max-height: 20px;"/> <a href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer">Minecraft</a>`,
+      `• <img src="/NierPortfolioV2/images/Nier.jpg" style="max-height: 20px;"/> <a href="https://www.niergame.com/en/" target="_blank" rel="noopener noreferrer">Nier Automata</a>`,
+      `• <img src="/NierPortfolioV2/images/SearingExarch.jpg" style="max-width: 20px;"/> <a href="https://www.pathofexile.com/" target="_blank" rel="noopener noreferrer">Path of Exile</a>`,
+      `• <img src="/NierPortfolioV2/images/Terraria.jpg" style="max-width: 20px;"/> <a href="https://terraria.org/" target="_blank" rel="noopener noreferrer">Terraria</a>`,
     ].join('\n'),
     "Reading": [
       "Reading? Reading. I enjoy reading manga and light nodels.", "", 
@@ -41,12 +40,12 @@ export default function Interests() {
       // `• Delicious in Dungeon`,
       // `• Frieren: Beyond Journey's End`,
       // `• The Girl From the Other Side: Siúil, a Rún`,
-      `• <img src="/images/ApothecaryDiaries.jpg" style="max-width: 20px;"/> <a href="https://anilist.co/manga/99026/Kusuriya-no-Hitorigoto/" target="_blank" rel="noopener noreferrer">Apothecary Diaries</a>`,
-      `• <img src="/images/MagusBride.jpg" style="max-width: 20px;"/> <a href="https://anilist.co/manga/85435/Mahoutsukai-no-Yome/" target="_blank" rel="noopener noreferrer">The Ancient Magus' Bride</a>`,
-      `• <img src="/images/BlueBox.jpg" style="max-width: 20px;"/> <a href="https://anilist.co/manga/132182/Ao-no-Hako/" target="_blank" rel="noopener noreferrer">Blue Box</a>`,
-      `• <img src="/images/DungeonMeshi.jpg" style="max-width: 20px;"/> <a href="https://anilist.co/manga/86082/Dungeon-Meshi/" target="_blank" rel="noopener noreferrer">Delicious in Dungeon</a>`,
-      `• <img src="/images/Frieren.jpg" style="max-width: 20px;"/> <a href="https://anilist.co/manga/118586/Frieren-Beyond-Journeys-End/" target="_blank" rel="noopener noreferrer">Frieren: Beyond Journey's End</a>`,
-      `• <img src="/images/OtherSide.jpg" style="max-width: 20px;"/> <a href="https://anilist.co/manga/86770/Totsukuni-no-Shoujo/" target="_blank" rel="noopener noreferrer">The Girl From the Other Side: Siúil, a Rún</a>`,
+      `• <img src="/NierPortfolioV2/images/ApothecaryDiaries.jpg" style="max-width: 20px;"/> <a href="https://anilist.co/manga/99026/Kusuriya-no-Hitorigoto/" target="_blank" rel="noopener noreferrer">Apothecary Diaries</a>`,
+      `• <img src="/NierPortfolioV2/images/MagusBride.jpg" style="max-width: 20px;"/> <a href="https://anilist.co/manga/85435/Mahoutsukai-no-Yome/" target="_blank" rel="noopener noreferrer">The Ancient Magus' Bride</a>`,
+      `• <img src="/NierPortfolioV2/images/BlueBox.jpg" style="max-width: 20px;"/> <a href="https://anilist.co/manga/132182/Ao-no-Hako/" target="_blank" rel="noopener noreferrer">Blue Box</a>`,
+      `• <img src="/NierPortfolioV2/images/DungeonMeshi.jpg" style="max-width: 20px;"/> <a href="https://anilist.co/manga/86082/Dungeon-Meshi/" target="_blank" rel="noopener noreferrer">Delicious in Dungeon</a>`,
+      `• <img src="/NierPortfolioV2/images/Frieren.jpg" style="max-width: 20px;"/> <a href="https://anilist.co/manga/118586/Frieren-Beyond-Journeys-End/" target="_blank" rel="noopener noreferrer">Frieren: Beyond Journey's End</a>`,
+      `• <img src="/NierPortfolioV2/images/OtherSide.jpg" style="max-width: 20px;"/> <a href="https://anilist.co/manga/86770/Totsukuni-no-Shoujo/" target="_blank" rel="noopener noreferrer">The Girl From the Other Side: Siúil, a Rún</a>`,
 
       // `• : <a href="" target="_blank" rel="noopener noreferrer"></a>`,
     ].join('\n'),
