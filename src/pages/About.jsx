@@ -22,7 +22,7 @@ export default function About() {
       `Email: <a href="mailto:w553li@uwaterloo.ca">w553li@uwaterloo.ca</a>`,
       `Linkedin: <a href="https://www.linkedin.com/in/william553li" target="_blank" rel="noopener noreferrer">linkedin.com/in/william553li</a>`,
       `Github: <a href="https://github.com/W553Li" target="_blank" rel="noopener noreferrer">github.com/W553Li</a>`,
-      // `Resume: <a href="/path-to-your-resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>`
+      `Resume: <a href="/NierPortfolioV2/William_Li_Software_Engineer_Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>`
     ].join('\n'),
     "Programming Languages": [
       `• <img src="/NierPortfolioV2/icons/python.svg" style="max-width: 20px;"/> Python`, 
