@@ -32,7 +32,7 @@ export default function Interests() {
       `• <img src="/NierPortfolioV2/images/Terraria.jpg" style="max-width: 20px;"/> <a href="https://terraria.org/" target="_blank" rel="noopener noreferrer">Terraria</a>`,
     ].join('\n'),
     "Reading": [
-      "Reading? Reading. I enjoy reading manga and light nodels.", "", 
+      "Reading? Reading. I enjoy reading manga and light novels.", "", 
       "Some of my recent favorites are:",
       // `• Apothecary Diaries`,
       // `• The Ancient Magus' Bride`,
